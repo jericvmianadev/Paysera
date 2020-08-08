@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6B7290064329A2AFF46D557 /* Pods_Paysera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068D0892E1158CA2BB54DC20 /* Pods_Paysera.framework */; };
 		FE11953E24DE6A9800461797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11953D24DE6A9800461797 /* AppDelegate.swift */; };
 		FE11954024DE6A9800461797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11953F24DE6A9800461797 /* SceneDelegate.swift */; };
 		FE11954224DE6A9800461797 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11954124DE6A9800461797 /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068D0892E1158CA2BB54DC20 /* Pods_Paysera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paysera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C08EFA55FE9C087A246F19F /* Pods-Paysera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paysera.debug.xcconfig"; path = "Target Support Files/Pods-Paysera/Pods-Paysera.debug.xcconfig"; sourceTree = "<group>"; };
+		DAE30D2C4658B1754DA0CD94 /* Pods-Paysera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paysera.release.xcconfig"; path = "Target Support Files/Pods-Paysera/Pods-Paysera.release.xcconfig"; sourceTree = "<group>"; };
 		FE11953A24DE6A9800461797 /* Paysera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paysera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE11953D24DE6A9800461797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE11953F24DE6A9800461797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B7290064329A2AFF46D557 /* Pods_Paysera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A408BA5DDF151A39E0A9018 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C08EFA55FE9C087A246F19F /* Pods-Paysera.debug.xcconfig */,
+				DAE30D2C4658B1754DA0CD94 /* Pods-Paysera.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C85332749E7EB661432F968C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				068D0892E1158CA2BB54DC20 /* Pods_Paysera.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE11953124DE6A9800461797 = {
 			isa = PBXGroup;
 			children = (
 				FE11953C24DE6A9800461797 /* Paysera */,
 				FE11953B24DE6A9800461797 /* Products */,
+				2A408BA5DDF151A39E0A9018 /* Pods */,
+				C85332749E7EB661432F968C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE11955124DE6A9800461797 /* Build configuration list for PBXNativeTarget "Paysera" */;
 			buildPhases = (
+				A955D405BCEB6C33C06616CE /* [CP] Check Pods Manifest.lock */,
 				FE11953624DE6A9800461797 /* Sources */,
 				FE11953724DE6A9800461797 /* Frameworks */,
 				FE11953824DE6A9800461797 /* Resources */,
+				8421E5750A62CC2055D5E307 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8421E5750A62CC2055D5E307 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Paysera/Pods-Paysera-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Paysera/Pods-Paysera-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Paysera/Pods-Paysera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A955D405BCEB6C33C06616CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Paysera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE11953624DE6A9800461797 /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		FE11955224DE6A9800461797 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C08EFA55FE9C087A246F19F /* Pods-Paysera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +422,7 @@
 		};
 		FE11955324DE6A9800461797 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE30D2C4658B1754DA0CD94 /* Pods-Paysera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
