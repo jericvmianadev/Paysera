@@ -58,16 +58,64 @@
 		FE11953C24DE6A9800461797 /* Paysera */ = {
 			isa = PBXGroup;
 			children = (
-				FE11953D24DE6A9800461797 /* AppDelegate.swift */,
-				FE11953F24DE6A9800461797 /* SceneDelegate.swift */,
-				FE11954124DE6A9800461797 /* ViewController.swift */,
-				FE11954324DE6A9800461797 /* Main.storyboard */,
-				FE11954924DE6A9800461797 /* Assets.xcassets */,
-				FE11954B24DE6A9800461797 /* LaunchScreen.storyboard */,
-				FE11954E24DE6A9800461797 /* Info.plist */,
-				FE11954624DE6A9800461797 /* Paysera.xcdatamodeld */,
+				FE11955724DE6B2400461797 /* Application Layer */,
+				FE11955824DE6B2C00461797 /* Presentation Layer */,
+				FE11955B24DE6B4F00461797 /* Core Layer */,
+				FE11955424DE6A9F00461797 /* Supporting Files */,
+				FE11955A24DE6B3A00461797 /* Persistence Store */,
 			);
 			path = Paysera;
+			sourceTree = "<group>";
+		};
+		FE11955424DE6A9F00461797 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE11954B24DE6A9800461797 /* LaunchScreen.storyboard */,
+				FE11954E24DE6A9800461797 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE11955724DE6B2400461797 /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				FE11953D24DE6A9800461797 /* AppDelegate.swift */,
+				FE11953F24DE6A9800461797 /* SceneDelegate.swift */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		FE11955824DE6B2C00461797 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				FE11954124DE6A9800461797 /* ViewController.swift */,
+				FE11954324DE6A9800461797 /* Main.storyboard */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		FE11955924DE6B3300461797 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE11954924DE6A9800461797 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE11955A24DE6B3A00461797 /* Persistence Store */ = {
+			isa = PBXGroup;
+			children = (
+				FE11954624DE6A9800461797 /* Paysera.xcdatamodeld */,
+			);
+			path = "Persistence Store";
+			sourceTree = "<group>";
+		};
+		FE11955B24DE6B4F00461797 /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				FE11955924DE6B3300461797 /* Resources */,
+			);
+			path = "Core Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H7N2BU2XD;
-				INFOPLIST_FILE = Paysera/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Paysera/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H7N2BU2XD;
-				INFOPLIST_FILE = Paysera/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Paysera/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
