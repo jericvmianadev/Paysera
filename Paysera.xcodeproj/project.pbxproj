@@ -26,6 +26,8 @@
 		FE764E1024DF9247001708CE /* CurrencyConverterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764E0F24DF9247001708CE /* CurrencyConverterResponse.swift */; };
 		FE764E1224DF95DE001708CE /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764E1124DF95DE001708CE /* ApiController.swift */; };
 		FE764E1524DF99EB001708CE /* CurrencyConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764E1424DF99EB001708CE /* CurrencyConverterViewModel.swift */; };
+		FE764E1724DFC2BB001708CE /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764E1624DFC2BB001708CE /* PersistenceManager.swift */; };
+		FE764E1924DFC33E001708CE /* UserBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764E1824DFC33E001708CE /* UserBalance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		FE764E0F24DF9247001708CE /* CurrencyConverterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterResponse.swift; sourceTree = "<group>"; };
 		FE764E1124DF95DE001708CE /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		FE764E1424DF99EB001708CE /* CurrencyConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewModel.swift; sourceTree = "<group>"; };
+		FE764E1624DFC2BB001708CE /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		FE764E1824DFC33E001708CE /* UserBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBalance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				FE11954624DE6A9800461797 /* Paysera.xcdatamodeld */,
+				FE764E1624DFC2BB001708CE /* PersistenceManager.swift */,
+				FE764E1824DFC33E001708CE /* UserBalance.swift */,
 			);
 			path = "Persistence Store";
 			sourceTree = "<group>";
@@ -388,11 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5A960E24DECF8E009830EA /* ChooseCurrencyViewController.swift in Sources */,
+				FE764E1924DFC33E001708CE /* UserBalance.swift in Sources */,
 				FE764E1224DF95DE001708CE /* ApiController.swift in Sources */,
 				FE5A960A24DEA6D1009830EA /* Extensions.swift in Sources */,
 				FE764E0A24DF8F83001708CE /* CurrencyConverterService.swift in Sources */,
 				FE764E0224DF8595001708CE /* Strings.swift in Sources */,
 				FE764DFB24DF7EDD001708CE /* WebService.swift in Sources */,
+				FE764E1724DFC2BB001708CE /* PersistenceManager.swift in Sources */,
 				FE11954224DE6A9800461797 /* CurrencyConverterViewController.swift in Sources */,
 				FE11954824DE6A9800461797 /* Paysera.xcdatamodeld in Sources */,
 				FE764E1524DF99EB001708CE /* CurrencyConverterViewModel.swift in Sources */,
