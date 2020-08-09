@@ -1,16 +1,34 @@
 PODS:
+  - Alamofire (5.2.2)
   - IQKeyboardManagerSwift (6.3.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2.2)
   - IQKeyboardManagerSwift (= 6.3.0)
+  - RxCocoa (~> 5.1.1)
+  - RxSwift (~> 5.1.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - IQKeyboardManagerSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 10000a10e8f7d7853c362506902b0d0dadef5ae8
+PODFILE CHECKSUM: a632018bf74c6c207a423dfccf207b353ed66f7f
 
 COCOAPODS: 1.9.3
