@@ -1,0 +1,21 @@
+//
+//  Localizable.strings
+//  Paysera
+//
+//  Created by Jeric Miana on 8/9/20.
+//  Copyright © 2020 Jeric Miana. All rights reserved.
+//
+
+// MARK: - Alert
+
+"Title.CurrencyConverted" = "Currency Converted";
+"Message.CurrencyConverted" = "You have converted %@ to %@. Comission Fee - %@.";
+"Button.Title.Done" = "Done";
+"Button.Title.Done" = "Ok";
+
+
+// MARK: - Error
+
+"Error.invalidUrl" = "Invalid URL";
+"Error.invalidData" = "Invalid data";
+"Error.invalidResponse" = "Invalid response";
