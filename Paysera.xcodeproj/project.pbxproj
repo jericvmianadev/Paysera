@@ -16,7 +16,6 @@
 		FE11954A24DE6A9800461797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE11954924DE6A9800461797 /* Assets.xcassets */; };
 		FE11954D24DE6A9800461797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE11954B24DE6A9800461797 /* LaunchScreen.storyboard */; };
 		FE5A960A24DEA6D1009830EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5A960924DEA6D1009830EA /* Extensions.swift */; };
-		FE5A960E24DECF8E009830EA /* ChooseCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5A960D24DECF8E009830EA /* ChooseCurrencyViewController.swift */; };
 		FE764DFB24DF7EDD001708CE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764DFA24DF7EDD001708CE /* WebService.swift */; };
 		FE764E0024DF7EF8001708CE /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764DFF24DF7EF8001708CE /* WebServiceError.swift */; };
 		FE764E0224DF8595001708CE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE764E0124DF8595001708CE /* Strings.swift */; };
@@ -44,7 +43,6 @@
 		FE11954C24DE6A9800461797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE11954E24DE6A9800461797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE5A960924DEA6D1009830EA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		FE5A960D24DECF8E009830EA /* ChooseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCurrencyViewController.swift; sourceTree = "<group>"; };
 		FE764DFA24DF7EDD001708CE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		FE764DFF24DF7EF8001708CE /* WebServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
 		FE764E0124DF8595001708CE /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				FE764DE624DF7B47001708CE /* Currency Converter */,
-				FE764DE724DF7B57001708CE /* Choose Currency */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -198,14 +195,6 @@
 				FE764E1324DF99D5001708CE /* View Model */,
 			);
 			path = "Currency Converter";
-			sourceTree = "<group>";
-		};
-		FE764DE724DF7B57001708CE /* Choose Currency */ = {
-			isa = PBXGroup;
-			children = (
-				FE5A960D24DECF8E009830EA /* ChooseCurrencyViewController.swift */,
-			);
-			path = "Choose Currency";
 			sourceTree = "<group>";
 		};
 		FE764DE824DF7C18001708CE /* View */ = {
@@ -393,7 +382,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5A960E24DECF8E009830EA /* ChooseCurrencyViewController.swift in Sources */,
 				FE764E1924DFC33E001708CE /* UserBalance.swift in Sources */,
 				FE764E1224DF95DE001708CE /* ApiController.swift in Sources */,
 				FE5A960A24DEA6D1009830EA /* Extensions.swift in Sources */,

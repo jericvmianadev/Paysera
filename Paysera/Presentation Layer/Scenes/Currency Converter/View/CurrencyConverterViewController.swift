@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQDropDownTextField
 import RxSwift
 import RxCocoa
 
@@ -18,9 +19,9 @@ class CurrencyConverterViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var sellCurrencyButton: UIButton!
+    @IBOutlet weak var sellCurrencyDropdown: IQDropDownTextField!
     @IBOutlet weak var sellCurrencyTextField: UITextField!
-    @IBOutlet weak var buyCurrencyButton: UIButton!
+    @IBOutlet weak var buyCurrencyDropdown: IQDropDownTextField!
     @IBOutlet weak var buyCurrencyLabel: UILabel!
     
     private let viewModel = CurrencyConverterViewModel()
@@ -34,6 +35,7 @@ class CurrencyConverterViewController: UIViewController {
         configureUI()
         configureTextFieldEditing()
         configureButtonTap()
+        configureDropdowns()
     }
     
     // MARK: - Configure UI
@@ -63,11 +65,25 @@ class CurrencyConverterViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
+    private func configureDropdowns() {
+        let currencyItems = ["EUR", "USD", "JPY"]
+        
+        sellCurrencyDropdown.delegate = self
+        sellCurrencyDropdown.isOptionalDropDown = false
+        sellCurrencyDropdown.itemList = currencyItems
+        sellCurrencyDropdown.selectedItem = currencyItems[0]
+        
+        buyCurrencyDropdown.delegate = self
+        buyCurrencyDropdown.isOptionalDropDown = false
+        buyCurrencyDropdown.itemList = currencyItems
+        buyCurrencyDropdown.selectedItem = currencyItems[1]
+    }
+    
     // MARK: - Fetch Data
     
     private func convertCurrency() {
-        if let sellCurrency = sellCurrencyButton.currentTitle,
-            let buyCurrency = buyCurrencyButton.currentTitle,
+        if let sellCurrency = sellCurrencyDropdown.selectedItem,
+            let buyCurrency = buyCurrencyDropdown.selectedItem,
             let amount = sellCurrencyTextField.text {
             
             viewModel.convertCurrency(sellCurrency: sellCurrency,
@@ -87,3 +103,8 @@ class CurrencyConverterViewController: UIViewController {
     }
 }
 
+extension CurrencyConverterViewController: IQDropDownTextFieldDelegate {
+    func textField(_ textField: IQDropDownTextField, didSelectItem item: String?) {
+        convertCurrency()
+    }
+}
