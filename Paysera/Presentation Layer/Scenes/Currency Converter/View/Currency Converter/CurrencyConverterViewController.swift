@@ -23,6 +23,7 @@ class CurrencyConverterViewController: UIViewController {
     @IBOutlet weak var sellCurrencyTextField: UITextField!
     @IBOutlet weak var buyCurrencyDropdown: IQDropDownTextField!
     @IBOutlet weak var buyCurrencyLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let currencyItems = ["EUR", "USD", "JPY"]
 
@@ -100,6 +101,8 @@ class CurrencyConverterViewController: UIViewController {
             .debounce(.milliseconds(250), scheduler: MainScheduler.instance)
             .bind { [weak self] _ in
                 self?.convertCurrency(shouldUpdateBalance: true)
+                /// Show activity indicator
+                self?.activityIndicator.startAnimating()
             }.disposed(by: disposeBag)
     }
 }
@@ -125,8 +128,10 @@ extension CurrencyConverterViewController {
                     /// Display received amount
                     self?.buyCurrencyLabel.text = "+" + data.amount
                     
-                    /// Update and save user balance
                     if shouldUpdateBalance {
+                        /// Hide activity indicator
+                        self?.activityIndicator.stopAnimating()
+                        /// Update and save user balance
                         self?.persistenceManager.updateUserBalance(
                             sellValue: sellValue.doubleValue,
                             sellCurrency: sellCurrency,

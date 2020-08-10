@@ -200,6 +200,10 @@
                                     <constraint firstAttribute="bottom" secondItem="ud7-9Y-WHe" secondAttribute="bottom" constant="10" id="aOg-PP-eye"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d9G-OC-oeU">
+                                <rect key="frame" x="260" y="437" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -209,6 +213,7 @@
                             <constraint firstAttribute="trailing" secondItem="ChG-g3-yw9" secondAttribute="trailing" id="Gi5-eV-054"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xgi-xl-kiR" secondAttribute="trailing" id="KEg-FG-269"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmH-ma-OPw" secondAttribute="trailing" constant="30" id="LQk-nf-J7m"/>
+                            <constraint firstItem="d9G-OC-oeU" firstAttribute="trailing" secondItem="nmH-ma-OPw" secondAttribute="trailing" constant="-10" id="Qfy-lP-vpK"/>
                             <constraint firstItem="ChG-g3-yw9" firstAttribute="top" secondItem="HtB-04-p3l" secondAttribute="bottom" constant="5" id="SPy-3W-LmA"/>
                             <constraint firstItem="iGE-Eo-1Cx" firstAttribute="top" secondItem="EBt-Iu-oEW" secondAttribute="bottom" constant="25" id="The-AW-T0x"/>
                             <constraint firstItem="HtB-04-p3l" firstAttribute="top" secondItem="bAV-Ea-mb0" secondAttribute="bottom" constant="5" id="WQR-Ks-z7A"/>
@@ -218,6 +223,7 @@
                             <constraint firstItem="nmH-ma-OPw" firstAttribute="top" secondItem="ChG-g3-yw9" secondAttribute="bottom" constant="55" id="Zf0-HU-mc7"/>
                             <constraint firstItem="bAV-Ea-mb0" firstAttribute="top" secondItem="iGE-Eo-1Cx" secondAttribute="bottom" constant="5" id="aQB-Xt-7S4"/>
                             <constraint firstItem="nmH-ma-OPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aoD-8M-FBr"/>
+                            <constraint firstItem="d9G-OC-oeU" firstAttribute="centerY" secondItem="nmH-ma-OPw" secondAttribute="centerY" id="ejd-Sr-kk6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bAV-Ea-mb0" secondAttribute="trailing" id="gui-lc-bNT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HtB-04-p3l" secondAttribute="trailing" constant="15" id="iho-xi-qw8"/>
                             <constraint firstItem="xgi-xl-kiR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="isT-7A-Xq5"/>
@@ -229,6 +235,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Currency Converter" id="B7c-KP-uly"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="d9G-OC-oeU" id="siF-G0-qAX"/>
                         <outlet property="buyCurrencyDropdown" destination="av8-Vv-c0t" id="sLd-jv-Mq3"/>
                         <outlet property="buyCurrencyLabel" destination="hHL-5d-7GH" id="stB-bW-G6Y"/>
                         <outlet property="collectionView" destination="sKg-4b-g5U" id="I7c-xM-oWX"/>
