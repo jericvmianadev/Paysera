@@ -35,13 +35,17 @@ class CurrencyConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureUI()
         configureTextFieldEditing()
         configureButtonTap()
         configureDropdowns()
         configureCollectionView()
         
         updateExchangeRates()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        configureUI()
     }
     
     // MARK: - Configure UI
