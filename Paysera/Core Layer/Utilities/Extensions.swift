@@ -61,6 +61,7 @@ extension UIViewController {
     
     func showAlert(withTitle: String = "", message: String, actionTitle: String = Strings.Alert.Action.ok) {
         let alert = UIAlertController(title: withTitle, message: message, preferredStyle: .alert)
+        alert.overrideUserInterfaceStyle = .light
         alert.addAction(UIAlertAction(title: actionTitle, style: .default))
         present(alert, animated: true)
     }

@@ -55,6 +55,7 @@ class CurrencyConverterViewController: UIViewController {
         headerView.setGradientBackground()
         submitButton.setGradientBackground()
         submitButton.roundCorners()
+        overrideUserInterfaceStyle = .light
     }
     
     private func configureDropdowns() {
