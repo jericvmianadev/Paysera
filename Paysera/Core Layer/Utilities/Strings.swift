@@ -11,6 +11,9 @@ import Foundation
 // MARK: - Alert
 
 struct Strings {
+    struct App {
+        static let name = "App.Name".localized
+    }
     struct Alert {
         struct Title {
             static let currencyConverted = "Title.CurrencyConverted".localized

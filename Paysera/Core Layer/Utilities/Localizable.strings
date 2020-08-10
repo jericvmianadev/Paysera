@@ -6,6 +6,10 @@
 //  Copyright © 2020 Jeric Miana. All rights reserved.
 //
 
+
+// MARK: - App
+"App.Name" = "Currency converter";
+
 // MARK: - Alert
 
 "Title.CurrencyConverted" = "Currency Converted";

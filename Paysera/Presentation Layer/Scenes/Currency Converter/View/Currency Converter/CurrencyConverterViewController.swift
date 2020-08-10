@@ -47,6 +47,7 @@ class CurrencyConverterViewController: UIViewController {
     // MARK: - Configure UI
     
     private func configureUI() {
+        titleLabel.text = Strings.App.name
         headerView.setGradientBackground()
         submitButton.setGradientBackground()
         submitButton.roundCorners()

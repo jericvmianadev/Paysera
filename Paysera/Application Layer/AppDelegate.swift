@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
         
         /// Set initial user balances
         let persistenceManager = PersistenceManager()
