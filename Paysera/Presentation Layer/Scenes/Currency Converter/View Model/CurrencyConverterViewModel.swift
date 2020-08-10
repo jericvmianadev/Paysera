@@ -11,7 +11,12 @@ import RxSwift
 
 class CurrencyConverterViewModel {
     
+    // MARK: - Properties
+    
     private let disposeBag = DisposeBag()
+    private let persistenceManager = PersistenceManager()
+    
+    // MARK: - Make API Request
     
     func convertCurrency(sellCurrency: String,
                          buyCurrency: String,
@@ -34,5 +39,17 @@ class CurrencyConverterViewModel {
                 onError: { error in
                     failure((error as? WebServiceError)?.description ?? error.localizedDescription)
                 }).disposed(by: disposeBag)
+    }
+    
+    // MARK: - Compute Comission Fee
+    
+    func computeComissionFee(sellValue: Double) -> Double? {
+        guard
+            let transactionCount = persistenceManager.getUserTransaction()?.transactionCount,
+            transactionCount >= 5
+        else {
+            return 0.0
+        }
+        return sellValue * Constants.comissionFee
     }
 }

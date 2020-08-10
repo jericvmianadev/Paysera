@@ -9,6 +9,17 @@
 import Foundation
 import CoreData
 
+// MARK: - Enum Currency
+enum Currency: String {
+    case eur
+    case usd
+    case jpy
+    
+    var description: String {
+        return rawValue.uppercased()
+    }
+}
+
 class PersistenceManager {
     
     // MARK: - Core Data stack
@@ -59,13 +70,6 @@ class PersistenceManager {
 
 extension PersistenceManager {
     
-    // MARK: - Enum Currency
-    enum Currency: String {
-        case eur
-        case usd
-        case jpy
-    }
-
     // MARK: - Get User Balance
     
     func getUserBalance() -> UserBalance? {
@@ -74,34 +78,43 @@ extension PersistenceManager {
     
     // MARK: - Update User Balance
     
-    func updateUserBalance(sellValue: Float,
+    func updateUserBalance(sellValue: Double,
                            sellCurrency: String,
-                           buyValue: Float,
-                           buyCurrency: String) {
+                           buyValue: Double,
+                           buyCurrency: String,
+                           comissionFee: Double,
+                           success: () -> Void,
+                           failure: (String) -> Void) {
         
-        let sellCurrency = Currency(rawValue: sellCurrency)
-        let buyCurrency = Currency(rawValue: buyCurrency)
-        
+        let sellCurrency = Currency(rawValue: sellCurrency.lowercased())
+        let buyCurrency = Currency(rawValue: buyCurrency.lowercased())
+       
         guard let userBalance = getUserBalance() else {
             return
         }
         
+        /// Add comission fee to current sell value
+        let totalSellValue = sellValue + comissionFee
+        
         switch sellCurrency {
         case .eur:
-            guard userBalance.eur > sellValue else {
+            guard userBalance.eur >= totalSellValue else {
+                failure(Strings.Alert.Message.insufficientBalance)
                 return
             }
-            userBalance.eur -= sellValue
+            userBalance.eur -= totalSellValue
         case .usd:
-            guard userBalance.usd > sellValue else {
+            guard userBalance.usd >= totalSellValue else {
+                failure(Strings.Alert.Message.insufficientBalance)
                 return
             }
-            userBalance.usd -= sellValue
+            userBalance.usd -= totalSellValue
         case .jpy:
-            guard userBalance.jpy > sellValue else {
+            guard userBalance.jpy >= totalSellValue else {
+                failure(Strings.Alert.Message.insufficientBalance)
                 return
             }
-            userBalance.jpy -= sellValue
+            userBalance.jpy -= totalSellValue
         default:
             return
         }
@@ -116,7 +129,28 @@ extension PersistenceManager {
         default:
             return
         }
-        
+        incrementTransactionCount()
         save()
+        success()
+    }
+}
+
+extension PersistenceManager {
+    
+    // MARK: - Get User Transaction
+    
+    func getUserTransaction() -> UserTransaction? {
+        return retrieve(UserTransaction.self).first
+    }
+    
+    // MARK: - Increment Transaction Count
+
+    func incrementTransactionCount() {
+        if getUserTransaction() == nil {
+            let userTransaction = UserTransaction(context: context)
+            userTransaction.transactionCount += 1
+        } else {
+            getUserTransaction()?.transactionCount += 1
+        }
     }
 }

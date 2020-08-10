@@ -10,8 +10,9 @@
 
 "Title.CurrencyConverted" = "Currency Converted";
 "Message.CurrencyConverted" = "You have converted %@ to %@. Comission Fee - %@.";
+"Message.InsufficientBalance" = "Insufficient balance";
 "Button.Title.Done" = "Done";
-"Button.Title.Done" = "Ok";
+"Button.Title.Ok" = "OK";
 
 
 // MARK: - Error

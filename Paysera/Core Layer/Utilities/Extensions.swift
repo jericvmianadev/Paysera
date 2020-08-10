@@ -40,4 +40,41 @@ extension String {
     var doubleValue: Double {
         return (self as NSString).doubleValue
     }
+    
+    var isNumeric : Bool {
+        return NumberFormatter().number(from: self) != nil
+    }
+}
+
+// MARK: - Double
+
+extension Double {
+    func round(to places: Int = 2) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+
+// MARK: - UIViewController
+
+extension UIViewController {
+    
+    func showAlert(withTitle: String = "", message: String, actionTitle: String = Strings.Alert.Action.ok) {
+        let alert = UIAlertController(title: withTitle, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default))
+        present(alert, animated: true)
+    }
+    
+}
+
+// MARK: - UICollectionViewCell
+
+extension UICollectionViewCell {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
+    static var nib: UINib {
+        return UINib(nibName: reuseIdentifier, bundle: nil)
+    }
 }

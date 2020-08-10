@@ -43,7 +43,6 @@ class WebService<T: Decodable>: NSObject {
                                      parameters: self.parameters,
                                      encoding: self.paramEncoding)
                 .responseJSON { response in
-                    debugPrint(response)
                     self.observeResponse(response, with: observer)
             }
             return Disposables.create {

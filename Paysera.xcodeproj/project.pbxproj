@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C6B7290064329A2AFF46D557 /* Pods_Paysera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068D0892E1158CA2BB54DC20 /* Pods_Paysera.framework */; };
+		FE0283B424E0C56500B769D8 /* BalanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0283B224E0C56500B769D8 /* BalanceCollectionViewCell.swift */; };
+		FE0283B524E0C56500B769D8 /* BalanceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0283B324E0C56500B769D8 /* BalanceCollectionViewCell.xib */; };
+		FE0283DC24E0EFB300B769D8 /* UserTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0283DB24E0EFB300B769D8 /* UserTransaction.swift */; };
+		FE0283DE24E0F89900B769D8 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0283DD24E0F89900B769D8 /* Constans.swift */; };
 		FE11953E24DE6A9800461797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11953D24DE6A9800461797 /* AppDelegate.swift */; };
 		FE11954024DE6A9800461797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11953F24DE6A9800461797 /* SceneDelegate.swift */; };
 		FE11954224DE6A9800461797 /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11954124DE6A9800461797 /* CurrencyConverterViewController.swift */; };
@@ -33,6 +37,10 @@
 		068D0892E1158CA2BB54DC20 /* Pods_Paysera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paysera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C08EFA55FE9C087A246F19F /* Pods-Paysera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paysera.debug.xcconfig"; path = "Target Support Files/Pods-Paysera/Pods-Paysera.debug.xcconfig"; sourceTree = "<group>"; };
 		DAE30D2C4658B1754DA0CD94 /* Pods-Paysera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paysera.release.xcconfig"; path = "Target Support Files/Pods-Paysera/Pods-Paysera.release.xcconfig"; sourceTree = "<group>"; };
+		FE0283B224E0C56500B769D8 /* BalanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE0283B324E0C56500B769D8 /* BalanceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceCollectionViewCell.xib; sourceTree = "<group>"; };
+		FE0283DB24E0EFB300B769D8 /* UserTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTransaction.swift; sourceTree = "<group>"; };
+		FE0283DD24E0F89900B769D8 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		FE11953A24DE6A9800461797 /* Paysera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paysera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE11953D24DE6A9800461797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE11953F24DE6A9800461797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +91,24 @@
 				068D0892E1158CA2BB54DC20 /* Pods_Paysera.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE0283D924E0CDA400B769D8 /* Currency Converter Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE0283B224E0C56500B769D8 /* BalanceCollectionViewCell.swift */,
+				FE0283B324E0C56500B769D8 /* BalanceCollectionViewCell.xib */,
+			);
+			path = "Currency Converter Collection Cell";
+			sourceTree = "<group>";
+		};
+		FE0283DA24E0CDB900B769D8 /* Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+				FE11954124DE6A9800461797 /* CurrencyConverterViewController.swift */,
+				FE11954324DE6A9800461797 /* Main.storyboard */,
+			);
+			path = "Currency Converter";
 			sourceTree = "<group>";
 		};
 		FE11953124DE6A9800461797 = {
@@ -156,6 +182,7 @@
 				FE11954624DE6A9800461797 /* Paysera.xcdatamodeld */,
 				FE764E1624DFC2BB001708CE /* PersistenceManager.swift */,
 				FE764E1824DFC33E001708CE /* UserBalance.swift */,
+				FE0283DB24E0EFB300B769D8 /* UserTransaction.swift */,
 			);
 			path = "Persistence Store";
 			sourceTree = "<group>";
@@ -176,6 +203,7 @@
 				FE5A960924DEA6D1009830EA /* Extensions.swift */,
 				FE764E0124DF8595001708CE /* Strings.swift */,
 				FE764E0324DF85DE001708CE /* Localizable.strings */,
+				FE0283DD24E0F89900B769D8 /* Constans.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -200,8 +228,8 @@
 		FE764DE824DF7C18001708CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE11954124DE6A9800461797 /* CurrencyConverterViewController.swift */,
-				FE11954324DE6A9800461797 /* Main.storyboard */,
+				FE0283DA24E0CDB900B769D8 /* Currency Converter */,
+				FE0283D924E0CDA400B769D8 /* Currency Converter Collection Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +358,7 @@
 				FE764E0424DF85DE001708CE /* Localizable.strings in Resources */,
 				FE11954A24DE6A9800461797 /* Assets.xcassets in Resources */,
 				FE11954524DE6A9800461797 /* Main.storyboard in Resources */,
+				FE0283B524E0C56500B769D8 /* BalanceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,11 +413,13 @@
 			files = (
 				FE764E1924DFC33E001708CE /* UserBalance.swift in Sources */,
 				FE764E1224DF95DE001708CE /* ApiController.swift in Sources */,
+				FE0283DE24E0F89900B769D8 /* Constans.swift in Sources */,
 				FE5A960A24DEA6D1009830EA /* Extensions.swift in Sources */,
 				FE764E0A24DF8F83001708CE /* CurrencyConverterService.swift in Sources */,
 				FE764E0224DF8595001708CE /* Strings.swift in Sources */,
 				FE764DFB24DF7EDD001708CE /* WebService.swift in Sources */,
 				FE764E1724DFC2BB001708CE /* PersistenceManager.swift in Sources */,
+				FE0283B424E0C56500B769D8 /* BalanceCollectionViewCell.swift in Sources */,
 				FE11954224DE6A9800461797 /* CurrencyConverterViewController.swift in Sources */,
 				FE11954824DE6A9800461797 /* Paysera.xcdatamodeld in Sources */,
 				FE764E1524DF99EB001708CE /* CurrencyConverterViewModel.swift in Sources */,
@@ -397,6 +428,7 @@
 				FE11953E24DE6A9800461797 /* AppDelegate.swift in Sources */,
 				FE764E0024DF7EF8001708CE /* WebServiceError.swift in Sources */,
 				FE11954024DE6A9800461797 /* SceneDelegate.swift in Sources */,
+				FE0283DC24E0EFB300B769D8 /* UserTransaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

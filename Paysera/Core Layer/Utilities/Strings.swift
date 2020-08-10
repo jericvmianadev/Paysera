@@ -21,6 +21,7 @@ struct Strings {
                                             _ comission: String) -> String = { p1, p2, p3 in
                 return String(format: "Message.CurrencyConverted".localized, p1, p2, p3)
             }
+            static let insufficientBalance = "Message.InsufficientBalance".localized
         }
         struct Action {
             static let done = "Button.Title.Done".localized

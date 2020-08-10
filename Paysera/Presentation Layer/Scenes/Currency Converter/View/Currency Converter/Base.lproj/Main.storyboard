@@ -30,7 +30,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="EsK-gR-T4Z"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uEr-3D-PS4">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uEr-3D-PS4">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -229,9 +229,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Currency Converter" id="B7c-KP-uly"/>
                     <connections>
-                        <outlet property="balanceCollectionView" destination="sKg-4b-g5U" id="L0W-Cv-wQf"/>
                         <outlet property="buyCurrencyDropdown" destination="av8-Vv-c0t" id="sLd-jv-Mq3"/>
                         <outlet property="buyCurrencyLabel" destination="hHL-5d-7GH" id="stB-bW-G6Y"/>
+                        <outlet property="collectionView" destination="sKg-4b-g5U" id="I7c-xM-oWX"/>
                         <outlet property="headerView" destination="xgi-xl-kiR" id="Hh4-8z-SYA"/>
                         <outlet property="sellCurrencyDropdown" destination="W7E-WZ-doy" id="kY7-cQ-5GX"/>
                         <outlet property="sellCurrencyTextField" destination="qRj-zt-WE2" id="jUU-7k-U9c"/>
